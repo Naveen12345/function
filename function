@@ -1,0 +1,64 @@
+functions
+mysql> create table Employee (emp_id INT,Emp_name varchar(20),salary INT);
+Query OK, 0 rows affected (0.43 sec)
+mysql> insert into Employee(Emp_id,Emp_name,salary)values(100,'naveen',25000);
+Query OK, 1 row affected (0.09 sec)
+
+mysql> insert into Employee(Emp_id,Emp_name,salary)values(101,'varun',20000);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into Employee(Emp_id,Emp_name,salary)values(102,'tanuja',10000);
+Query OK, 1 row affected (0.09 sec)
+
+mysql> insert into Employee(Emp_id,Emp_name,salary)values(103,'sudhakar',25500);
+Query OK, 1 row affected (0.09 sec)
+
+mysql> select * from Employee;
++--------+----------+--------+
+| emp_id | Emp_name | salary |
++--------+----------+--------+
+|    100 | naveen   |  25000 |
+|    101 | varun    |  20000 |
+|    102 | tanuja   |  10000 |
+|    103 | sudhakar |  25500 |
++--------+----------+--------+
+4 rows in set (0.00 sec)
+mysql> select max(salary) from Employee;
++-------------+
+| max(salary) |
++-------------+
+|      255000 |
++-------------+
+1 row in set (0.16 sec)
+
+mysql> select min(salary) from Employee;
++-------------+
+| min(salary) |
++-------------+
+|       10000 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select AVG(salary) from Employee;
++-------------+
+| AVG(salary) |
++-------------+
+| 20125.0000  |
++-------------+
+1 row in set (0.06 sec)
+
+mysql> select SUM(salary) from Employee;
++-------------+
+| SUM(salary) |
++-------------+
+|       80500 |
++-------------+
+1 row in set (0.01 sec)
+
+mysql> select COUNT(salary) from Employee;
++---------------+
+| COUNT(salary) |
++---------------+
+|             4 |
++---------------+
+1 row in set (0.00 sec)
